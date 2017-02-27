@@ -102,6 +102,9 @@ extern "C" {
 #define EEPROM_MAXLEN_CRC32               4
 //
 #define EEPROM_MAXLEN_BOOLEAN             1
+#define EEPROM_MAXLEN_LONG                4
+#define EEPROM_MAXLEN_SHORT               2
+#define EEPROM_MAXLEN_CHAR                1
 //
 #define EEPROM_MAXLEN_WLAN_SSID          32  // max. length a SSID may have
 #define EEPROM_MAXLEN_WLAN_PASSPHRASE    64  // max. length of a WLAN passphrase
