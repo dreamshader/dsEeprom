@@ -119,7 +119,11 @@ dsEeprom::dsEeprom( unsigned int newBlockSize, unsigned char newMagic, int newLo
   }
   else
   {
+#ifdef ESP8266
     EEPROM.begin(newBlockSize);
+#else
+    EEPROM.begin();
+#endif // ESP8266
     blockSize = newBlockSize;
     status &= ~EE_STATUS_INVALID_SIZE;
   }
@@ -167,7 +171,11 @@ int dsEeprom::init( unsigned int newBlockSize, unsigned char newMagic, int newLo
   }
   else
   {
+#ifdef ESP8266
     EEPROM.begin(newBlockSize);
+#else
+    EEPROM.begin();
+#endif // ESP8266
     blockSize = newBlockSize;
     status &= ~EE_STATUS_INVALID_SIZE;
   }
