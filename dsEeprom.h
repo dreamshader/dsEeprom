@@ -45,7 +45,14 @@
 #include <inttypes.h>
 #include <stdarg.h>
 #include <EEPROM.h>
+
+#ifdef USE_SIMPLE_LOG
 #include <SimpleLog.h>
+#else
+#define LOGLEVEL_QUIET    0
+#define LOGLEVEL_DEFAULT  0
+#define LOGLEVEL_INFO     0
+#endif // USE_SIMPLE_LOG
 
 
 #if defined(ARDUINO) && ARDUINO >= 100
